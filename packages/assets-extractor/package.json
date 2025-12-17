@@ -1,0 +1,11 @@
+{
+  "name": "@minecraft-assets/extractor",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "start": "bun run.ts"
+  }
+}
