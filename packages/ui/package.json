@@ -1,12 +1,53 @@
 {
-  "name": "ui",
-  "module": "index.ts",
+  "name": "@minecraft-assets/ui",
+  "version": "0.1.0",
   "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./items": {
+      "import": "./dist/items.js",
+      "types": "./dist/items.d.ts"
+    },
+    "./blocks": {
+      "import": "./dist/blocks.js",
+      "types": "./dist/blocks.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts ./src/items.ts ./src/blocks.ts --outdir=dist --target=browser --external react --external react-dom && bun run build:types",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "prepublishOnly": "bun run build"
   },
   "peerDependencies": {
-    "typescript": "^5"
-  }
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/minecraft-assets-react"
+  },
+  "keywords": [
+    "minecraft",
+    "react",
+    "icons",
+    "textures",
+    "items",
+    "blocks"
+  ],
+  "license": "MIT"
 }
