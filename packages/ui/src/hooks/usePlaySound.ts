@@ -33,12 +33,10 @@ export function usePlaySound(src: string): PlaySoundReturn {
     (options?: PlaySoundOptions) => {
       const audio = getAudio();
 
-      // Apply options
       audio.volume = options?.volume ?? 1;
       audio.loop = options?.loop ?? false;
       audio.playbackRate = options?.playbackRate ?? 1;
 
-      // Reset to start and play
       audio.currentTime = 0;
       audio.play();
       isPlayingRef.current = true;

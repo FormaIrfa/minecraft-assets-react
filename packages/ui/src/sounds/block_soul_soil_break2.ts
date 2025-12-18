@@ -1,0 +1,1 @@
+export { default } from '../../assets/sounds/block/soul_soil/break2.ogg?url';

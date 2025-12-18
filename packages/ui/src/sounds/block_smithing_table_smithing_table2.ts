@@ -1,0 +1,1 @@
+export { default } from '../../assets/sounds/block/smithing_table/smithing_table2.ogg?url';
