@@ -1,5 +1,5 @@
 {
-  "name": "@Xefreh/minecraft-assets-react",
+  "name": "@xefreh/minecraft-assets-react",
   "version": "0.1.0",
   "type": "module",
   "sideEffects": false,
@@ -28,7 +28,8 @@
   "files": [
     "dist",
     "src/sounds",
-    "src/vite-env.d.ts"
+    "src/vite-env.d.ts",
+    "README.md"
   ],
   "scripts": {
     "build": "bun build ./src/index.ts ./src/items.ts ./src/blocks.ts --outdir=dist --target=browser --external react --external react-dom && bun run build:types",

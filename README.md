@@ -2,6 +2,12 @@
 
 React library to use Minecraft assets (icons, sounds) in your applications.
 
+## 📦 NPM Package
+
+This library is available on npm as [`@xefreh/minecraft-assets-react`](https://www.npmjs.com/package/@xefreh/minecraft-assets-react).
+
+**📖 For usage instructions, see the [package README](./packages/ui/README.md)**
+
 ## Project Structure
 
 ```
@@ -54,13 +60,20 @@ This will download and extract textures and sounds from the latest Minecraft ver
 
 ## Library Usage
 
+### Quick Start
+
+```bash
+npm install @xefreh/minecraft-assets-react
+```
+
 ### Components
 
 ```tsx
-import { MinecraftIcon, MinecraftSound, usePlaySound } from '@minecraft-assets/ui';
-import { diamond, diamond_sword } from '@minecraft-assets/ui/items';
-import { stone, dirt } from '@minecraft-assets/ui/blocks';
-import { damage_hit1, records_cat } from '@minecraft-assets/ui/sounds';
+import { MinecraftIcon, MinecraftSound, usePlaySound } from '@xefreh/minecraft-assets-react';
+import { diamond, diamond_sword } from '@xefreh/minecraft-assets-react/items';
+import { stone, dirt } from '@xefreh/minecraft-assets-react/blocks';
+import records_cat from '@xefreh/minecraft-assets-react/sounds/records_cat';
+import damage_hit1 from '@xefreh/minecraft-assets-react/sounds/damage_hit1';
 
 // Display an icon
 <MinecraftIcon src={diamond} alt="Diamond" size={64} />
@@ -73,8 +86,11 @@ const hitSound = usePlaySound(damage_hit1);
 hitSound.play({ volume: 0.8 });
 ```
 
+**⚠️ Note**: This package is optimized for **Vite**. See the [package README](./packages/ui/README.md) for more details.
+
 ## Technologies
 
 - [Bun](https://bun.sh) - JavaScript runtime
 - [React](https://react.dev) - UI library
+- [Vite](https://vitejs.dev) - Build tool (recommended)
 - Bun workspaces for monorepo management
