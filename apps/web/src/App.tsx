@@ -28,12 +28,11 @@ import {
   iron_block,
   emerald_block,
 } from '@minecraft-assets/ui/blocks';
-import {
-  records_cat,
-  records_pigstep,
-  damage_hit1,
-  ambient_cave_cave1,
-} from '@minecraft-assets/ui/sounds';
+// Import sounds directly for tree-shaking
+import records_cat from '@minecraft-assets/ui/sounds/records_cat';
+import records_pigstep from '@minecraft-assets/ui/sounds/records_pigstep';
+import damage_hit1 from '@minecraft-assets/ui/sounds/damage_hit1';
+import ambient_cave_cave1 from '@minecraft-assets/ui/sounds/ambient_cave_cave1';
 
 export default function App() {
   const hitSound = usePlaySound(damage_hit1);

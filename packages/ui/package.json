@@ -21,11 +21,15 @@
     "./sounds": {
       "import": "./dist/sounds.js",
       "types": "./dist/sounds.d.ts"
+    },
+    "./sounds/*": {
+      "import": "./src/sounds/*.ts"
     }
   },
   "files": [
     "dist",
-    "assets"
+    "src/sounds",
+    "assets/sounds"
   ],
   "scripts": {
     "build": "bun build ./src/index.ts ./src/items.ts ./src/blocks.ts ./src/sounds.ts --outdir=dist --target=browser --external react --external react-dom && bun run build:types",
@@ -51,7 +55,8 @@
     "icons",
     "textures",
     "items",
-    "blocks"
+    "blocks",
+    "sounds"
   ],
   "license": "MIT"
 }

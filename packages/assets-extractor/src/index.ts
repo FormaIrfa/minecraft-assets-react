@@ -160,6 +160,13 @@ function toSoundExportName(relativePath: string): string {
     .replace(/[^a-zA-Z0-9_]/g, '_');
 }
 
+async function encodeImageToBase64(filePath: string): Promise<string> {
+  const file = Bun.file(filePath);
+  const buffer = await file.arrayBuffer();
+  const base64 = Buffer.from(buffer).toString('base64');
+  return `data:image/png;base64,${base64}`;
+}
+
 export async function generateExportFiles(uiPackagePath: string) {
   const itemsDir = `${uiPackagePath}/assets/item`;
   const blocksDir = `${uiPackagePath}/assets/block`;
@@ -168,12 +175,14 @@ export async function generateExportFiles(uiPackagePath: string) {
   const pngGlob = new Bun.Glob('*.png');
   const oggGlob = new Bun.Glob('**/*.ogg');
 
-  // Generate items.ts
+  // Generate items.ts with Base64 encoded images
   const itemFiles = Array.from(pngGlob.scanSync(itemsDir));
-  const itemExports = itemFiles.map((f) => {
+  const itemExports: string[] = [];
+  for (const f of itemFiles) {
     const name = toExportName(f);
-    return `export { default as ${name} } from '../assets/item/${f}';`;
-  });
+    const base64 = await encodeImageToBase64(`${itemsDir}/${f}`);
+    itemExports.push(`export const ${name} = '${base64}';`);
+  }
   const itemNames = itemFiles.map((f) => `'${toExportName(f)}'`).join('\n  | ');
   const itemsContent = `${itemExports.join('\n')}
 
@@ -181,14 +190,16 @@ export type ItemName =
   | ${itemNames};
 `;
   await Bun.write(`${uiPackagePath}/src/items.ts`, itemsContent);
-  console.log(`Generated items.ts with ${itemExports.length} exports`);
+  console.log(`Generated items.ts with ${itemExports.length} Base64 exports`);
 
-  // Generate blocks.ts
+  // Generate blocks.ts with Base64 encoded images
   const blockFiles = Array.from(pngGlob.scanSync(blocksDir));
-  const blockExports = blockFiles.map((f) => {
+  const blockExports: string[] = [];
+  for (const f of blockFiles) {
     const name = toExportName(f);
-    return `export { default as ${name} } from '../assets/block/${f}';`;
-  });
+    const base64 = await encodeImageToBase64(`${blocksDir}/${f}`);
+    blockExports.push(`export const ${name} = '${base64}';`);
+  }
   const blockNames = blockFiles
     .map((f) => `'${toExportName(f)}'`)
     .join('\n  | ');
@@ -198,22 +209,44 @@ export type BlockName =
   | ${blockNames};
 `;
   await Bun.write(`${uiPackagePath}/src/blocks.ts`, blocksContent);
-  console.log(`Generated blocks.ts with ${blockExports.length} exports`);
+  console.log(`Generated blocks.ts with ${blockExports.length} Base64 exports`);
 
-  // Generate sounds.ts
+  // Generate individual sound files for proper tree-shaking
+  // Each sound gets its own file so only imported sounds are bundled
   const soundFiles = Array.from(oggGlob.scanSync(soundsDir));
+  const soundsDir2 = `${uiPackagePath}/src/sounds`;
+  await Bun.$`mkdir -p ${soundsDir2}`.quiet();
+
+  // Generate individual sound modules
+  for (const f of soundFiles) {
+    const name = toSoundExportName(f);
+    const content = `export { default } from '../../assets/sounds/${f}?url';\n`;
+    await Bun.write(`${soundsDir2}/${name}.ts`, content);
+  }
+
+  // Generate sounds/index.ts that re-exports all sounds (for convenience)
   const soundExports = soundFiles.map((f) => {
     const name = toSoundExportName(f);
-    return `export { default as ${name} } from '../assets/sounds/${f}';`;
+    return `export { default as ${name} } from './${name}';`;
   });
   const soundNames = soundFiles
     .map((f) => `'${toSoundExportName(f)}'`)
     .join('\n  | ');
-  const soundsContent = `${soundExports.join('\n')}
+  const soundsIndexContent = `// Re-export all sounds - import individually for tree-shaking
+${soundExports.join('\n')}
 
 export type SoundName =
   | ${soundNames};
 `;
-  await Bun.write(`${uiPackagePath}/src/sounds.ts`, soundsContent);
-  console.log(`Generated sounds.ts with ${soundExports.length} exports`);
+  await Bun.write(`${soundsDir2}/index.ts`, soundsIndexContent);
+
+  // Keep sounds.ts as a barrel export for backwards compatibility
+  const soundsTsContent = `// For tree-shaking, import directly: import sound from '@minecraft-assets/ui/sounds/sound_name'
+export * from './sounds/index';
+`;
+  await Bun.write(`${uiPackagePath}/src/sounds.ts`, soundsTsContent);
+
+  console.log(
+    `Generated ${soundFiles.length} individual sound modules in src/sounds/`
+  );
 }
