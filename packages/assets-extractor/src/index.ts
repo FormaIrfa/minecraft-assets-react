@@ -175,7 +175,6 @@ export async function generateExportFiles(uiPackagePath: string) {
   const pngGlob = new Bun.Glob('*.png');
   const oggGlob = new Bun.Glob('**/*.ogg');
 
-  // Generate items.ts with Base64 encoded images
   const itemFiles = Array.from(pngGlob.scanSync(itemsDir));
   const itemExports: string[] = [];
   for (const f of itemFiles) {
@@ -211,9 +210,6 @@ export type BlockName =
   await Bun.write(`${uiPackagePath}/src/blocks.ts`, blocksContent);
   console.log(`Generated blocks.ts with ${blockExports.length} Base64 exports`);
 
-  // Generate individual sound files for proper tree-shaking
-  // Each sound gets its own file so only imported sounds are bundled
-  // Sounds are hosted on GitHub raw and loaded at runtime
   const GITHUB_RAW_BASE =
     'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds';
 
@@ -221,7 +217,6 @@ export type BlockName =
   const soundsDir2 = `${uiPackagePath}/src/sounds`;
   await Bun.$`mkdir -p ${soundsDir2}`.quiet();
 
-  // Generate individual sound modules with GitHub URLs
   for (const f of soundFiles) {
     const name = toSoundExportName(f);
     const url = `${GITHUB_RAW_BASE}/${f}`;
@@ -229,7 +224,6 @@ export type BlockName =
     await Bun.write(`${soundsDir2}/${name}.ts`, content);
   }
 
-  // Generate sounds/index.ts that re-exports all sounds (for convenience)
   const soundExports = soundFiles.map((f) => {
     const name = toSoundExportName(f);
     return `export { default as ${name} } from './${name}';`;
