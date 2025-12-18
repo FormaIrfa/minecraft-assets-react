@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/item/brush/brush_sand_complete1.ogg?url';
+const item_brush_brush_sand_complete1 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/item/brush/brush_sand_complete1.ogg';
+export default item_brush_brush_sand_complete1;

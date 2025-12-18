@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/coppergolem/regular/hurt4.ogg?url';
+const mob_coppergolem_regular_hurt4 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/coppergolem/regular/hurt4.ogg';
+export default mob_coppergolem_regular_hurt4;

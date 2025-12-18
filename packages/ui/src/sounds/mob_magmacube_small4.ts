@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/magmacube/small4.ogg?url';
+const mob_magmacube_small4 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/magmacube/small4.ogg';
+export default mob_magmacube_small4;

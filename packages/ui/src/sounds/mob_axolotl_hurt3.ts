@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/axolotl/hurt3.ogg?url';
+const mob_axolotl_hurt3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/axolotl/hurt3.ogg';
+export default mob_axolotl_hurt3;

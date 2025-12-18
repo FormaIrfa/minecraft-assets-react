@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/amethyst_cluster/break1.ogg?url';
+const block_amethyst_cluster_break1 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/amethyst_cluster/break1.ogg';
+export default block_amethyst_cluster_break1;

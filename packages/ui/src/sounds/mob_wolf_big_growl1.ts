@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/wolf/big/growl1.ogg?url';
+const mob_wolf_big_growl1 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/wolf/big/growl1.ogg';
+export default mob_wolf_big_growl1;

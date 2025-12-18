@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/sculk/break5.ogg?url';
+const block_sculk_break5 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/sculk/break5.ogg';
+export default block_sculk_break5;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/soul_sand/break6.ogg?url';
+const block_soul_sand_break6 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/soul_sand/break6.ogg';
+export default block_soul_sand_break6;

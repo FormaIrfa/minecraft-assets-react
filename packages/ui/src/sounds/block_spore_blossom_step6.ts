@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/spore_blossom/step6.ogg?url';
+const block_spore_blossom_step6 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/spore_blossom/step6.ogg';
+export default block_spore_blossom_step6;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/item/armor/equip_chain2.ogg?url';
+const item_armor_equip_chain2 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/item/armor/equip_chain2.ogg';
+export default item_armor_equip_chain2;

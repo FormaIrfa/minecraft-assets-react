@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/vault/deactivate.ogg?url';
+const block_vault_deactivate = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/vault/deactivate.ogg';
+export default block_vault_deactivate;

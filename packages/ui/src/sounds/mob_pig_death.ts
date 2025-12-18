@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/pig/death.ogg?url';
+const mob_pig_death = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/pig/death.ogg';
+export default mob_pig_death;

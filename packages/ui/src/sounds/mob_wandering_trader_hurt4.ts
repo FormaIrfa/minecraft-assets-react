@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/wandering_trader/hurt4.ogg?url';
+const mob_wandering_trader_hurt4 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/wandering_trader/hurt4.ogg';
+export default mob_wandering_trader_hurt4;

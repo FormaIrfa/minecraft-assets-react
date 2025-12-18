@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/copper_bulb/place2.ogg?url';
+const block_copper_bulb_place2 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/copper_bulb/place2.ogg';
+export default block_copper_bulb_place2;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/honeyblock/break2.ogg?url';
+const block_honeyblock_break2 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/honeyblock/break2.ogg';
+export default block_honeyblock_break2;

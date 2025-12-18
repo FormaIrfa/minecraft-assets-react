@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/goat/pre_ram3.ogg?url';
+const mob_goat_pre_ram3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/goat/pre_ram3.ogg';
+export default mob_goat_pre_ram3;

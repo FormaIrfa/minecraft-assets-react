@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/coppergolem/oxidized/spin3.ogg?url';
+const mob_coppergolem_oxidized_spin3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/coppergolem/oxidized/spin3.ogg';
+export default mob_coppergolem_oxidized_spin3;

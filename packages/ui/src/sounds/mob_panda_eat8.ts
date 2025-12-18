@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/panda/eat8.ogg?url';
+const mob_panda_eat8 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/panda/eat8.ogg';
+export default mob_panda_eat8;

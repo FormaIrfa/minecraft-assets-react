@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/guardian/flop3.ogg?url';
+const mob_guardian_flop3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/guardian/flop3.ogg';
+export default mob_guardian_flop3;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/calcite/step6.ogg?url';
+const block_calcite_step6 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/calcite/step6.ogg';
+export default block_calcite_step6;

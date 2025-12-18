@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/step/wet_grass4.ogg?url';
+const step_wet_grass4 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/step/wet_grass4.ogg';
+export default step_wet_grass4;

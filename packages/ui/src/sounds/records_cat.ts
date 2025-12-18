@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/records/cat.ogg?url';
+const records_cat = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/records/cat.ogg';
+export default records_cat;

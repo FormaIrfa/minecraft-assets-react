@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/trial_spawner/spawn1.ogg?url';
+const block_trial_spawner_spawn1 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/trial_spawner/spawn1.ogg';
+export default block_trial_spawner_spawn1;

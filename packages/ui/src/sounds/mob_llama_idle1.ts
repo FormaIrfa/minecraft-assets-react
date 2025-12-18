@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/llama/idle1.ogg?url';
+const mob_llama_idle1 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/llama/idle1.ogg';
+export default mob_llama_idle1;

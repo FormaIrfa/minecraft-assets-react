@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/sculk/step6.ogg?url';
+const block_sculk_step6 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/sculk/step6.ogg';
+export default block_sculk_step6;

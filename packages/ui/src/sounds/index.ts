@@ -1,4 +1,4 @@
-// Re-export all sounds - import individually for tree-shaking
+// Sounds are loaded from GitHub - import individually for tree-shaking
 export { default as records_creator } from './records_creator';
 export { default as records_cat } from './records_cat';
 export { default as records_pigstep } from './records_pigstep';

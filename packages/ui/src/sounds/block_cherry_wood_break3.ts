@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/cherry_wood/break3.ogg?url';
+const block_cherry_wood_break3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/cherry_wood/break3.ogg';
+export default block_cherry_wood_break3;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/dig/sand2.ogg?url';
+const dig_sand2 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/dig/sand2.ogg';
+export default dig_sand2;

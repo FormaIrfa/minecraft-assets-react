@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/rooted_dirt/step5.ogg?url';
+const block_rooted_dirt_step5 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/rooted_dirt/step5.ogg';
+export default block_rooted_dirt_step5;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/azalea_leaves/step2.ogg?url';
+const block_azalea_leaves_step2 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/azalea_leaves/step2.ogg';
+export default block_azalea_leaves_step2;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/zombie/metal2.ogg?url';
+const mob_zombie_metal2 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/zombie/metal2.ogg';
+export default mob_zombie_metal2;

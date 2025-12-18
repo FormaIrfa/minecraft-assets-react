@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/deadbush/sandblock_version/bushrustle3.ogg?url';
+const block_deadbush_sandblock_version_bushrustle3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/deadbush/sandblock_version/bushrustle3.ogg';
+export default block_deadbush_sandblock_version_bushrustle3;

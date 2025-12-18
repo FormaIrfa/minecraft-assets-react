@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/ambient/cave/cave3.ogg?url';
+const ambient_cave_cave3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/ambient/cave/cave3.ogg';
+export default ambient_cave_cave3;

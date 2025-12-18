@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/sponge/wet_sponge/break3.ogg?url';
+const block_sponge_wet_sponge_break3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/sponge/wet_sponge/break3.ogg';
+export default block_sponge_wet_sponge_break3;

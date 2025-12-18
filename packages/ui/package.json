@@ -1,5 +1,5 @@
 {
-  "name": "@minecraft-assets/ui",
+  "name": "@Xefreh/minecraft-assets-react",
   "version": "0.1.0",
   "type": "module",
   "sideEffects": false,
@@ -19,8 +19,7 @@
       "types": "./dist/blocks.d.ts"
     },
     "./sounds": {
-      "import": "./dist/sounds.js",
-      "types": "./dist/sounds.d.ts"
+      "import": "./src/sounds/index.ts"
     },
     "./sounds/*": {
       "import": "./src/sounds/*.ts"
@@ -29,10 +28,10 @@
   "files": [
     "dist",
     "src/sounds",
-    "assets/sounds"
+    "src/vite-env.d.ts"
   ],
   "scripts": {
-    "build": "bun build ./src/index.ts ./src/items.ts ./src/blocks.ts ./src/sounds.ts --outdir=dist --target=browser --external react --external react-dom && bun run build:types",
+    "build": "bun build ./src/index.ts ./src/items.ts ./src/blocks.ts --outdir=dist --target=browser --external react --external react-dom && bun run build:types",
     "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
     "prepublishOnly": "bun run build"
   },
@@ -47,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/minecraft-assets-react"
+    "url": "https://github.com/Xefreh/minecraft-assets-react"
   },
   "keywords": [
     "minecraft",

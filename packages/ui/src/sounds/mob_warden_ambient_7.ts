@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/warden/ambient_7.ogg?url';
+const mob_warden_ambient_7 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/warden/ambient_7.ogg';
+export default mob_warden_ambient_7;

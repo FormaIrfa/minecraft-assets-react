@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/enderdragon/wings3.ogg?url';
+const mob_enderdragon_wings3 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/enderdragon/wings3.ogg';
+export default mob_enderdragon_wings3;

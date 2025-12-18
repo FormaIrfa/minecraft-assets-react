@@ -213,14 +213,19 @@ export type BlockName =
 
   // Generate individual sound files for proper tree-shaking
   // Each sound gets its own file so only imported sounds are bundled
+  // Sounds are hosted on GitHub raw and loaded at runtime
+  const GITHUB_RAW_BASE =
+    'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds';
+
   const soundFiles = Array.from(oggGlob.scanSync(soundsDir));
   const soundsDir2 = `${uiPackagePath}/src/sounds`;
   await Bun.$`mkdir -p ${soundsDir2}`.quiet();
 
-  // Generate individual sound modules
+  // Generate individual sound modules with GitHub URLs
   for (const f of soundFiles) {
     const name = toSoundExportName(f);
-    const content = `export { default } from '../../assets/sounds/${f}?url';\n`;
+    const url = `${GITHUB_RAW_BASE}/${f}`;
+    const content = `const ${name} = '${url}';\nexport default ${name};\n`;
     await Bun.write(`${soundsDir2}/${name}.ts`, content);
   }
 
@@ -232,7 +237,7 @@ export type BlockName =
   const soundNames = soundFiles
     .map((f) => `'${toSoundExportName(f)}'`)
     .join('\n  | ');
-  const soundsIndexContent = `// Re-export all sounds - import individually for tree-shaking
+  const soundsIndexContent = `// Sounds are loaded from GitHub - import individually for tree-shaking
 ${soundExports.join('\n')}
 
 export type SoundName =
@@ -240,13 +245,7 @@ export type SoundName =
 `;
   await Bun.write(`${soundsDir2}/index.ts`, soundsIndexContent);
 
-  // Keep sounds.ts as a barrel export for backwards compatibility
-  const soundsTsContent = `// For tree-shaking, import directly: import sound from '@minecraft-assets/ui/sounds/sound_name'
-export * from './sounds/index';
-`;
-  await Bun.write(`${uiPackagePath}/src/sounds.ts`, soundsTsContent);
-
   console.log(
-    `Generated ${soundFiles.length} individual sound modules in src/sounds/`
+    `Generated ${soundFiles.length} individual sound modules in src/sounds/ (GitHub URLs)`
   );
 }

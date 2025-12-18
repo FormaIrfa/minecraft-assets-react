@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/wooden_door/close2.ogg?url';
+const block_wooden_door_close2 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/wooden_door/close2.ogg';
+export default block_wooden_door_close2;

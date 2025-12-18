@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/sweet_berry_bush/place5.ogg?url';
+const block_sweet_berry_bush_place5 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/sweet_berry_bush/place5.ogg';
+export default block_sweet_berry_bush_place5;

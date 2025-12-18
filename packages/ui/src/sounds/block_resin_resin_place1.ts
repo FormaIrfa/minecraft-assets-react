@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/resin/resin_place1.ogg?url';
+const block_resin_resin_place1 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/resin/resin_place1.ogg';
+export default block_resin_resin_place1;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/breeze/jump1.ogg?url';
+const mob_breeze_jump1 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/breeze/jump1.ogg';
+export default mob_breeze_jump1;

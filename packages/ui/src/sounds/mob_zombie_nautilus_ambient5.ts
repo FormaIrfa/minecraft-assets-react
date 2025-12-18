@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/zombie_nautilus/ambient5.ogg?url';
+const mob_zombie_nautilus_ambient5 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/zombie_nautilus/ambient5.ogg';
+export default mob_zombie_nautilus_ambient5;

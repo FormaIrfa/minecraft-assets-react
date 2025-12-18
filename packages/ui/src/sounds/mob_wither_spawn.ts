@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/wither/spawn.ogg?url';
+const mob_wither_spawn = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/wither/spawn.ogg';
+export default mob_wither_spawn;

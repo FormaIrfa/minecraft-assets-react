@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/ambient/nether/warped_forest/creak4.ogg?url';
+const ambient_nether_warped_forest_creak4 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/ambient/nether/warped_forest/creak4.ogg';
+export default ambient_nether_warped_forest_creak4;

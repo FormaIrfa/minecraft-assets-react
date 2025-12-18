@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/happy_ghast/ambient4.ogg?url';
+const mob_happy_ghast_ambient4 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/happy_ghast/ambient4.ogg';
+export default mob_happy_ghast_ambient4;

@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/mob/irongolem/repair.ogg?url';
+const mob_irongolem_repair = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/mob/irongolem/repair.ogg';
+export default mob_irongolem_repair;

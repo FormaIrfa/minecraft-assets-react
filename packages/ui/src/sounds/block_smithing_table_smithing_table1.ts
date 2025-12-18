@@ -1,1 +1,2 @@
-export { default } from '../../assets/sounds/block/smithing_table/smithing_table1.ogg?url';
+const block_smithing_table_smithing_table1 = 'https://raw.githubusercontent.com/Xefreh/minecraft-assets-react/main/packages/ui/assets/sounds/block/smithing_table/smithing_table1.ogg';
+export default block_smithing_table_smithing_table1;
