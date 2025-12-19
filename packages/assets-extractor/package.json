@@ -1,5 +1,5 @@
 {
-  "name": "@minecraft-assets/extractor",
+  "name": "@xefreh/minecraft-assets-react/assets-extractor",
   "version": "0.1.0",
   "type": "module",
   "exports": {
@@ -7,5 +7,11 @@
   },
   "scripts": {
     "start": "bun run.ts"
+  },
+  "dependencies": {
+    "yauzl": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/yauzl": "^2.10.3"
   }
 }

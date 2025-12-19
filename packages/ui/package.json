@@ -1,10 +1,20 @@
 {
-  "name": "@xefreh/minecraft-assets-react",
+  "name": "@xefreh/minecraft-assets-react/ui",
   "version": "0.1.2",
-  "type": "module",
-  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xefreh/minecraft-assets-react"
+  },
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -31,24 +41,6 @@
     "src/vite-env.d.ts",
     "README.md"
   ],
-  "scripts": {
-    "build": "bun build ./src/index.ts ./src/items.ts ./src/blocks.ts --outdir=dist --target=browser --external react --external react-dom && bun run build:types",
-    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
-    "prepublishOnly": "bun run build"
-  },
-  "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "typescript": "^5.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Xefreh/minecraft-assets-react"
-  },
   "keywords": [
     "minecraft",
     "react",
@@ -58,5 +50,13 @@
     "blocks",
     "sounds"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "bun build ./src/index.ts ./src/items.ts ./src/blocks.ts --outdir=dist --target=browser --external react --external react-dom && bun run build:types",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "prepublishOnly": "bun run build"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "types": "./dist/index.d.ts"
 }

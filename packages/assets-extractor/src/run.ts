@@ -1,13 +1,14 @@
 import {
   getMinecraftVersion,
   downloadClient,
-  extractAssets,
   generateExportFiles,
   fetchVersionMetadata,
+  extractAssets,
+  type ExtractAssetsResult,
 } from './index';
 
-const minecraftVersion = process.argv[2] || 'latest';
-const uiPackagePath = process.argv[3] || './packages/ui';
+const minecraftVersion: string = process.argv[2] || 'latest';
+const uiPackagePath: string = process.argv[3] || '../../packages/ui';
 
 console.log(`Fetching Minecraft version: ${minecraftVersion}`);
 const version = await getMinecraftVersion(minecraftVersion);
@@ -22,7 +23,21 @@ const jarData = await downloadClient(versionMetadata);
 console.log(`Downloaded ${(jarData.byteLength / 1024 / 1024).toFixed(2)} MB`);
 
 console.log(`Extracting assets to: ${uiPackagePath}/assets`);
-await extractAssets(versionMetadata, jarData, uiPackagePath);
+const result: ExtractAssetsResult = await extractAssets({
+  jarData,
+  versionMetadata,
+  uiPackagePath,
+});
+
+if (!result.clientExtracted) {
+  console.error('Failed to extract assets from client');
+  process.exit(1);
+}
+
+if (!result.webExtracted) {
+  console.error('Failed to extract assets from web');
+  process.exit(1);
+}
 
 console.log('Generating export files...');
 await generateExportFiles(uiPackagePath);

@@ -1,5 +1,5 @@
 {
-  "name": "minecraft-assets-react",
+  "name": "@xefreh/minecraft-assets-react",
   "type": "module",
   "private": true,
   "workspaces": [
@@ -7,7 +7,7 @@
     "apps/*"
   ],
   "scripts": {
-    "extract": "bun run --filter @minecraft-assets/extractor start"
+    "extract": "bun run --filter @xefreh/minecraft-assets-react/assets-extractor start"
   },
   "devDependencies": {
     "@types/bun": "latest",

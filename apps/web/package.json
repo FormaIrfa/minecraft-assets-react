@@ -1,5 +1,5 @@
 {
-  "name": "@minecraft-assets/web",
+  "name": "@xefreh/minecraft-assets-react/web",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^19",
     "react-dom": "^19",
-    "@minecraft-assets/ui": "workspace:*"
+    "@xefreh/minecraft-assets-react/ui": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19",
