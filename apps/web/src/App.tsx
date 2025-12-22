@@ -28,7 +28,6 @@ import {
   iron_block,
   emerald_block,
 } from '@minecraft-assets/ui/blocks';
-// Import sounds directly for tree-shaking
 import records_cat from '@minecraft-assets/ui/sounds/records_cat';
 import records_pigstep from '@minecraft-assets/ui/sounds/records_pigstep';
 import damage_hit1 from '@minecraft-assets/ui/sounds/damage_hit1';
@@ -44,7 +43,7 @@ export default function App() {
       <h1 style={{ marginBottom: '2rem' }}>Minecraft Assets Demo</h1>
 
       <section style={{ marginBottom: '2rem' }}>
-        <h2>Minerais</h2>
+        <h2>Ores</h2>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <MinecraftIcon src={diamond} alt="Diamond" size={64} />
           <MinecraftIcon src={emerald} alt="Emerald" size={64} />
@@ -54,7 +53,7 @@ export default function App() {
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
-        <h2>Épées</h2>
+        <h2>Swords</h2>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <MinecraftIcon src={iron_sword} alt="Iron Sword" size={64} />
           <MinecraftIcon src={diamond_sword} alt="Diamond Sword" size={64} />
@@ -67,7 +66,7 @@ export default function App() {
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
-        <h2>Armure en diamant</h2>
+        <h2>Diamond Armor</h2>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <MinecraftIcon src={diamond_helmet} alt="Diamond Helmet" size={64} />
           <MinecraftIcon
@@ -84,7 +83,7 @@ export default function App() {
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
-        <h2>Outils</h2>
+        <h2>Tools</h2>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <MinecraftIcon
             src={diamond_pickaxe}
@@ -96,7 +95,7 @@ export default function App() {
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
-        <h2>Blocs</h2>
+        <h2>Blocks</h2>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <MinecraftIcon src={stone} alt="Stone" size={64} />
           <MinecraftIcon src={dirt} alt="Dirt" size={64} />
@@ -107,7 +106,7 @@ export default function App() {
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
-        <h2>Blocs précieux</h2>
+        <h2>Precious Blocks</h2>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <MinecraftIcon src={diamond_block} alt="Diamond Block" size={64} />
           <MinecraftIcon src={emerald_block} alt="Emerald Block" size={64} />
@@ -117,7 +116,7 @@ export default function App() {
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
-        <h2>Sons</h2>
+        <h2>Sounds</h2>
         <div
           style={{
             display: 'flex',
@@ -126,19 +125,19 @@ export default function App() {
           }}
         >
           <div>
-            <p style={{ margin: '0 0 0.5rem' }}>🎵 Disque Cat</p>
+            <p style={{ margin: '0 0 0.5rem' }}>🎵 Cat Disc</p>
             <MinecraftSound src={records_cat} />
           </div>
           <div>
-            <p style={{ margin: '0 0 0.5rem' }}>🎵 Disque Pigstep</p>
+            <p style={{ margin: '0 0 0.5rem' }}>🎵 Pigstep Disc</p>
             <MinecraftSound src={records_pigstep} />
           </div>
           <div>
-            <p style={{ margin: '0 0 0.5rem' }}>💥 Dégât</p>
+            <p style={{ margin: '0 0 0.5rem' }}>💥 Damage</p>
             <MinecraftSound src={damage_hit1} />
           </div>
           <div>
-            <p style={{ margin: '0 0 0.5rem' }}>🦇 Ambiance de grotte</p>
+            <p style={{ margin: '0 0 0.5rem' }}>🦇 Cave Ambience</p>
             <MinecraftSound src={ambient_cave_cave1} />
           </div>
         </div>
@@ -147,7 +146,7 @@ export default function App() {
       <section style={{ marginBottom: '2rem' }}>
         <h2>usePlaySound Hook</h2>
         <p style={{ marginBottom: '1rem', color: '#666' }}>
-          Jouer des sons programmatiquement sans composant audio visible
+          Play sounds programmatically without visible audio components
         </p>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <button
@@ -162,7 +161,7 @@ export default function App() {
               color: 'white',
             }}
           >
-            💥 Son de dégât
+            💥 Damage Sound
           </button>
           <button
             onClick={() => caveSound.play({ volume: 0.6 })}
@@ -176,7 +175,7 @@ export default function App() {
               color: 'white',
             }}
           >
-            🦇 Ambiance grotte
+            🦇 Cave Ambience
           </button>
           <button
             onClick={() => catMusic.play({ volume: 0.5, loop: true })}
@@ -190,7 +189,7 @@ export default function App() {
               color: 'white',
             }}
           >
-            🎵 Jouer Cat (loop)
+            🎵 Play Cat (loop)
           </button>
           <button
             onClick={() => catMusic.stop()}
@@ -204,7 +203,7 @@ export default function App() {
               color: 'white',
             }}
           >
-            ⏹️ Stop musique
+            ⏹️ Stop Music
           </button>
         </div>
       </section>
