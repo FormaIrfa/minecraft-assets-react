@@ -9,6 +9,8 @@
   "devDependencies": {
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "typescript": "^5.0.0"
   },
   "peerDependencies": {
@@ -53,7 +55,7 @@
   "license": "MIT",
   "scripts": {
     "build": "bun build ./src/index.ts ./src/items.ts ./src/blocks.ts --outdir=dist --target=browser --external react --external react-dom && bun run build:types",
-    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "build:types": "bunx tsc --emitDeclarationOnly --declaration --outDir dist",
     "prepublishOnly": "bun run build"
   },
   "sideEffects": false,

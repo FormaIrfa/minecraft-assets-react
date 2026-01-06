@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^19",
     "react-dom": "^19",
-    "@xefreh/minecraft-assets-react/ui": "workspace:*"
+    "@xefreh/minecraft-assets-react": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19",
