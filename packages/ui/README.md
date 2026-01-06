@@ -14,7 +14,7 @@ pnpm add @xefreh/minecraft-assets-react
 
 ## Requirements
 
-**⚠️ Important**: This package is optimized for **Vite**. While it may work with other bundlers, **Vite is highly recommended** for the best experience, especially for tree-shaking of sound files.
+**Important**: This package is optimized for **Vite**. While it may work with other bundlers, **Vite is highly recommended** for the best experience, especially for tree-shaking of sound files.
 
 If you're not using Vite, you may need to configure your bundler to handle TypeScript imports from npm packages.
 
@@ -52,7 +52,7 @@ function MyComponent() {
 
   return (
     <button onClick={() => hitSound.play({ volume: 0.8 })}>
-      💥 Play Sound
+      Play Sound
     </button>
   );
 }
@@ -91,12 +91,12 @@ function GameUI() {
 
 ## Features
 
-- 🎨 **792 Minecraft items** (Base64 encoded, tree-shakable)
-- 🧱 **1111 Minecraft blocks** (Base64 encoded, tree-shakable)
-- 🔊 **4405 Minecraft sounds** (loaded from GitHub, tree-shakable)
-- 📦 **Optimized bundle size** - Only imported assets are included
-- 🎯 **TypeScript support** - Full type definitions included
-- ⚡ **Tree-shaking** - Unused assets are automatically excluded
+- **792 Minecraft items** (Base64 encoded, tree-shakable)
+- **1111 Minecraft blocks** (Base64 encoded, tree-shakable)
+- **4405 Minecraft sounds** (loaded from GitHub, tree-shakable)
+- **Optimized bundle size** - Only imported assets are included
+- **TypeScript support** - Full type definitions included
+- **Tree-shaking** - Unused assets are automatically excluded
 
 ## Tree-Shaking
 

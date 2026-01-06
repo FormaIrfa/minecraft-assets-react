@@ -2,11 +2,11 @@
 
 React library to use Minecraft assets (icons, sounds) in your applications.
 
-## 📦 NPM Package
+## NPM Package
 
 This library is available on npm as [`@xefreh/minecraft-assets-react`](https://www.npmjs.com/package/@xefreh/minecraft-assets-react).
 
-**📖 For usage instructions, see the [package README](./packages/ui/README.md)**
+**For usage instructions, see the [package README](./packages/ui/README.md)**
 
 ## Project Structure
 
@@ -86,7 +86,7 @@ const hitSound = usePlaySound(damage_hit1);
 hitSound.play({ volume: 0.8 });
 ```
 
-**⚠️ Note**: This package is optimized for **Vite**. See the [package README](./packages/ui/README.md) for more details.
+**Note**: This package is optimized for **Vite**. See the [package README](./packages/ui/README.md) for more details.
 
 ## Technologies
 
